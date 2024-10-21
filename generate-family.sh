@@ -14,7 +14,7 @@ if [ ! -f "$PATH_URLS_RAW" ]; then
   echo "generate $PATH_URLS_RAW"
   while IFS= read -r url
   do
-    wget $url -O "$PATH_URLS_TEMP"
+    wget "$url" -O "$PATH_URLS_TEMP"
     cat "$PATH_URLS_TEMP" >> "$PATH_URLS_RAW"
   done < "$PATH_LIST_FILE"
 fi
