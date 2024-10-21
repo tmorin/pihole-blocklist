@@ -24,4 +24,5 @@ if [ ! -f "$PATH_URLS_FINAL" ]; then
   sort -u "$PATH_URLS_RAW" > "$PATH_URLS_FINAL"
   echo "clean $PATH_URLS_FINAL"
   sed -i '/^#/d' "$PATH_URLS_FINAL"
+  sed -i '/^!/d' "$PATH_URLS_FINAL"
 fi
