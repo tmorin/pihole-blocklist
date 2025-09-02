@@ -1,6 +1,6 @@
-#/bin/bash
+#!/usr/bin/env bash
 
-set -eu
+set -u
 
 mkdir -p work public
 
